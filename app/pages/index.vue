@@ -20,15 +20,23 @@ const { data: about } = await useAsyncData(`about-${route.path}`, async () => {
   return await queryCollection('content').path('/about').first()
 })
 
+useHead({
+  link: [
+    { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+  ],
+})
+
 useSeoMeta({
   title: appConfig.title,
   description: appConfig.metaDesc,
   ogTitle: appConfig.title,
   ogDescription: appConfig.metaDesc,
+  ogImage: '/images/og-image.png',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: appConfig.title,
   twitterDescription: appConfig.metaDesc,
+  twitterImage: '/images/og-image.png',
 })
 
 useSchemaOrg([
