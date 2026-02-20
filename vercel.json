@@ -1,3 +1,4 @@
 {
-  "buildCommand": "npm run decrypt-fonts && npm run build"
+  "installCommand": "dnf install -y git-crypt && pnpm install",
+  "buildCommand": "pnpm run decrypt-fonts && pnpm run build"
 }
