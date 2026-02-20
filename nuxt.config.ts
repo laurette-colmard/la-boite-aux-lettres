@@ -5,9 +5,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       titleTemplate: '%s',
-      link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
-      ]
     }
   },
   site: {
