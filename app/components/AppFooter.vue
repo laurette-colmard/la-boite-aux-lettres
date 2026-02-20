@@ -1,6 +1,28 @@
 <script setup lang="ts">
 const appConfig = useAppConfig()
 
+const contact = {
+  name: appConfig.author,
+  street: '29 rue Colonel Bougault',
+  postalCode: '38100',
+  city: 'Grenoble',
+  country: 'FR',
+}
+
+useSchemaOrg([
+  {
+    '@type': 'Person',
+    'name': contact.name,
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': contact.street,
+      'postalCode': contact.postalCode,
+      'addressLocality': contact.city,
+      'addressCountry': contact.country,
+    },
+  },
+])
+
 onMounted(() => {
   const protectedEmail = document.getElementById('protected-email') as HTMLAnchorElement
 
@@ -17,8 +39,8 @@ onMounted(() => {
     <div class="wrapper">
       <img src="~/assets/images/brand-compact.svg" :alt="appConfig.title"></img>
       <address>
-        Laurette Colmard<br>
-        29 rue Colonel Bougault, 38100 Grenoble (FR)<br>
+        {{ contact.name }}<br>
+        {{ contact.street }}, {{ contact.postalCode }} {{ contact.city }} ({{ contact.country }})<br>
         <a id="protected-email" class="protected"></a>
       </address>
     </div>

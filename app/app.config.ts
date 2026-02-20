@@ -1,7 +1,10 @@
+const author = 'Laurette Colmard'
+const siteName = 'La Boîte aux lettres'
+
 export default defineAppConfig({
-  metaTitle: 'La boite aux lettres - Laurette Colmard',
-  metaDesc: 'Characters with character, by type designer Laurette Colmard.',
-  title: 'La Boîte aux lettres - Laurette Colmard',
+  author,
+  siteName,
+  title: `${siteName} - ${author}`,
   description: "Characters with character,",
-  description2: "by type designer Laurette Colmard."
+  description2: `by type designer ${author}.`,
 })
