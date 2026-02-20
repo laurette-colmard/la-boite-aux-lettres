@@ -47,28 +47,31 @@ const { isScrolled } = useScroll(scrollThreshold.value)
   }
 }
 
-.app-header,
-.app-header--sticky {
-  display: flex;
+.app-header {
+  display: grid;
+  padding: var(--space-12) var(--space-8);
+  height: 68vh;
+  box-sizing: border-box;
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
-.app-header {
-  gap: var(--space-4);
-  flex-direction: column;
-  padding: var(--space-12) var(--space-8);
-  height: 68vh;
-  box-sizing: border-box;
+.app-header > * {
+  grid-row: 1;
+  grid-column: 1;
 }
 
 .app-header > div {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+  align-self: end;
 }
 
 .app-header--sticky {
+  display: flex;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   position: fixed;
   top: 0;
   width: 100%;
@@ -86,8 +89,8 @@ const { isScrolled } = useScroll(scrollThreshold.value)
 }
 
 .brand-logo {
-  align-self: flex-end;
-  margin-bottom: auto;
+  justify-self: end;
+  align-self: start;
   width: 135px;
 }
 
@@ -116,12 +119,7 @@ p {
 
 @media (min-width: 768px) {
   .app-header {
-    height: 100vh;
-  }
-
-  .app-header > div {
-    position: absolute;
-    bottom: var(--space-12);
+    height: 56.25vw;
   }
 
   .app-header > div > div {
