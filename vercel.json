@@ -1,4 +1,4 @@
 {
-  "installCommand": "dnf install -y git-crypt && pnpm install",
+  "installCommand": "dnf install -y gcc-c++ openssl-devel make && git clone --depth 1 https://github.com/AGWA/git-crypt.git /tmp/git-crypt && make -C /tmp/git-crypt install PREFIX=/usr/local && rm -rf /tmp/git-crypt && pnpm install",
   "buildCommand": "pnpm run decrypt-fonts && pnpm run build"
 }
