@@ -1,0 +1,4 @@
+public/fonts/**/*.woff2 filter=git-crypt diff=git-crypt
+public/fonts/**/*.woff filter=git-crypt diff=git-crypt
+public/fonts/**/*.ttf filter=git-crypt diff=git-crypt
+public/fonts/**/*.otf filter=git-crypt diff=git-crypt
