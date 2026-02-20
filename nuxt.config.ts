@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
+      titleTemplate: '%s',
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
       ]
