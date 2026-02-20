@@ -13,24 +13,6 @@ export default defineNuxtConfig({
       ],
     }
   },
-  vite: {
-    build: {
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              if (id.includes('vue') || id.includes('@vue'))
-                return 'vue'
-              if (id.includes('@nuxt/content') || id.includes('sqlite'))
-                return 'content'
-              if (id.includes('@vueuse'))
-                return 'vueuse'
-            }
-          },
-        },
-      },
-    },
-  },
   nitro: {
     prerender: {
       routes: ['/'],
