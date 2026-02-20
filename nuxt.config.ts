@@ -9,6 +9,12 @@ export default defineNuxtConfig({
       ]
     }
   },
+  site: {
+    url: 'https://laboiteauxlettres.xyz',
+    name: 'La Boîte aux lettres',
+    description: 'Characters with character, by type designer Laurette Colmard.',
+    defaultLocale: 'en',
+  },
   css: ['@unocss/reset/eric-meyer.css'],
   content: {
     experimental: {
@@ -25,7 +31,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/fonts',
     '@vueuse/nuxt',
-    'nuxt-studio'
+    'nuxt-studio',
+    '@nuxtjs/seo',
   ],
   studio: {
     repository: {

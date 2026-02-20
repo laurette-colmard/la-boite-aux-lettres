@@ -22,8 +22,26 @@ const { data: about } = await useAsyncData(`about-${route.path}`, async () => {
 
 useSeoMeta({
   title: appConfig.title,
-  description: appConfig.description
+  description: appConfig.metaDesc,
+  ogTitle: appConfig.title,
+  ogDescription: appConfig.metaDesc,
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: appConfig.title,
+  twitterDescription: appConfig.metaDesc,
 })
+
+useSchemaOrg([
+  definePerson({
+    name: 'Laurette Colmard',
+    jobTitle: 'Type Designer',
+    url: 'https://laboiteauxlettres.xyz',
+  }),
+  defineWebSite({
+    name: 'La Boîte aux lettres',
+  }),
+  defineWebPage(),
+])
 </script>
 
 <template>
