@@ -52,8 +52,8 @@ function handleToggle() {
       <img v-if="popupImageToggled" class="popup-close" src="~/assets/icons/times-bazaar-white.svg" alt="" @click="popupImageToggled = false"  />
     </header>
     <div class="image-wrap">
-      <img :src="project.image" :alt="project.title" />
-      <img v-if="popupImageToggled" :src="project.popupImage" :alt="project.title" />
+      <img :src="project.image" :alt="`${project.title} — ${project.shortDescription}`" />
+      <img v-if="popupImageToggled" :src="project.popupImage" :alt="`${project.title} — alternate view`" />
     </div>
   </article>
 </template>

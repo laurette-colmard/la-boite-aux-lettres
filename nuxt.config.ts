@@ -5,7 +5,15 @@ export default defineNuxtConfig({
   app: {
     head: {
       titleTemplate: '%s',
+      htmlAttrs: {
+        lang: 'en',
+      },
     }
+  },
+  nitro: {
+    prerender: {
+      routes: ['/'],
+    },
   },
   site: {
     url: 'https://laboiteauxlettres.xyz',

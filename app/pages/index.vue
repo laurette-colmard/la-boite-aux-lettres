@@ -49,6 +49,13 @@ useSchemaOrg([
     name: 'La Boîte aux lettres',
   }),
   defineWebPage(),
+  ...(projects.value ?? []).map(project => ({
+    '@type': 'CreativeWork',
+    'name': project.title,
+    'description': project.shortDescription,
+    'image': `https://laboiteauxlettres.xyz${project.image}`,
+    'author': { '@type': 'Person', 'name': 'Laurette Colmard' },
+  })),
 ])
 </script>
 

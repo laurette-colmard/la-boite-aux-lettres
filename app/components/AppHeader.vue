@@ -15,7 +15,10 @@ const { isScrolled } = useScroll(scrollThreshold.value)
   <header class="app-header" id="top">
     <img class="brand-logo" src="~/assets/images/brand-logo.svg" :alt="`${appConfig.title} - Logo`" />
     <div>
-      <img class="brand" src="~/assets/images/brand-compact.svg" :alt="appConfig.title" />
+      <h1>
+        <img class="brand" src="~/assets/images/brand-compact.svg" alt="" />
+        <span class="sr-only">{{ appConfig.title }}</span>
+      </h1>
       <div>
         <p>{{ appConfig.description }}</p>
         <p>{{ appConfig.description2 }}</p>
@@ -92,6 +95,24 @@ const { isScrolled } = useScroll(scrollThreshold.value)
   justify-self: end;
   align-self: start;
   width: 135px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .brand {
