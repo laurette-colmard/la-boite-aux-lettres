@@ -27,7 +27,7 @@ const { isScrolled } = useScroll(scrollThreshold.value)
   </header>
   <header class="app-header--sticky" v-if="isScrolled">
     <img src="~/assets/images/brand.svg" :alt="appConfig.title" />
-    <nav>
+    <nav aria-label="Main navigation">
       <NuxtLink to="#about">
         <img class="arrow-icon" src="~/assets/icons/arrow-down-black.svg" alt="" />
         About

@@ -9,7 +9,6 @@ const { data: projects } = await useAsyncData(`projects-${route.path}`, async ()
   return await queryCollection('projects').order('order', 'ASC').all()
 })
 
-const visibleProjects = computed(() => projects.value?.slice(0, displayCount.value) ?? [])
 const hasMoreProjects = computed(() => (projects.value?.length ?? 0) > displayCount.value)
 
 const loadMore = () => {
@@ -26,35 +25,37 @@ useHead({
   ],
 })
 
+const { url: siteUrl, description: siteDescription } = useSiteConfig()
+
 useSeoMeta({
   title: appConfig.title,
-  description: appConfig.metaDesc,
+  description: siteDescription,
   ogTitle: appConfig.title,
-  ogDescription: appConfig.metaDesc,
-  ogImage: '/images/og-image.png',
+  ogDescription: siteDescription,
+  ogImage: `${siteUrl}/images/og-image.png`,
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: appConfig.title,
-  twitterDescription: appConfig.metaDesc,
-  twitterImage: '/images/og-image.png',
+  twitterDescription: siteDescription,
+  twitterImage: `${siteUrl}/images/og-image.png`,
 })
 
 useSchemaOrg([
   definePerson({
-    name: 'Laurette Colmard',
+    name: appConfig.author,
     jobTitle: 'Type Designer',
-    url: 'https://laboiteauxlettres.xyz',
+    url: siteUrl,
   }),
   defineWebSite({
-    name: 'La Boîte aux lettres',
+    name: appConfig.siteName,
   }),
   defineWebPage(),
   ...(projects.value ?? []).map(project => ({
     '@type': 'CreativeWork',
     'name': project.title,
     'description': project.shortDescription,
-    'image': `https://laboiteauxlettres.xyz${project.image}`,
-    'author': { '@type': 'Person', 'name': 'Laurette Colmard' },
+    'image': `${siteUrl}${project.image}`,
+    'author': { '@type': 'Person', 'name': appConfig.author },
   })),
 ])
 </script>
@@ -63,9 +64,10 @@ useSchemaOrg([
   <template v-if="projects?.length">
     <section class="nuxt-content">
       <VProject
-        v-for="project in visibleProjects"
+        v-for="(project, index) in projects"
         :key="project.title"
         :project="project"
+        :class="{ 'visually-hidden': index >= displayCount }"
       />
       <button v-if="hasMoreProjects" class="load-more" @click="loadMore">
         <img class="arrow-icon" src="~/assets/icons/arrow-down-white.svg" alt="" />
@@ -110,6 +112,10 @@ useSchemaOrg([
 .load-more:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.visually-hidden {
+  display: none;
 }
 
 #about {
