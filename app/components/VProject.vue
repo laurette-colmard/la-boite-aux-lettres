@@ -202,6 +202,18 @@ header {
     width: 28px;
   }
 
+  h2 {
+    font-size: var(--text-sm);
+    gap: var(--space-2);
+    line-height: 18px;
+  }
+
+  header > div {
+    padding-left: var(--space-5);
+    font-size: var(--text-sm);
+    line-height: 18px;
+  }
+
   h2 button img {
     width: 14px;
   }

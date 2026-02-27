@@ -88,7 +88,6 @@ img {
 
   address {
     width: 66.666%;
-    font-size: var(--text-sm);
   }
 
   img {
@@ -97,6 +96,10 @@ img {
 }
 
 @media (min-width: 1024px) {
+  footer {
+    padding: 0 var(--space-12);
+  }
+
   .wrapper {
     gap: var(--space-16);
   }

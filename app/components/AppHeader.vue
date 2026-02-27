@@ -165,6 +165,10 @@ p {
 }
 
 @media (min-width: 1024px) {
+  .app-header {
+    padding: var(--space-10) var(--space-16);
+  }
+
   .app-header--sticky {
     height: 64px;
     padding: var(--space-4) var(--space-16);

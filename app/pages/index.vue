@@ -180,8 +180,13 @@ article h2 {
 }
 
 @media (min-width: 1024px) {
+  .nuxt-content {
+    padding: var(--space-12);
+  }
+
   #about {
     margin-top: var(--space-10);
+    padding: 0 var(--space-12);
   }
 
   #about article {
@@ -190,6 +195,10 @@ article h2 {
 
   #about article > div {
     padding-right: var(--space-4);
+  }
+
+  article h2 {
+    gap: var(--space-2);
   }
 }
 
