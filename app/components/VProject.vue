@@ -46,7 +46,7 @@ function handleToggle() {
         </ClientOnly>
       </h2>
       <div>
-        <p>{{ project.shortDescription }}</p>
+        <p v-html="project.shortDescription"></p>
         <Transition name="fade">
           <p v-if="descToggled">{{ project.description }}</p>
         </Transition>
@@ -122,6 +122,11 @@ article:last-child .image-wrap > img {
 
 header > div {
   padding-left: var(--space-4);
+}
+
+header > div :deep(a) {
+  text-decoration: underline;
+  color: var(--primary-color);
 }
 
 header {
