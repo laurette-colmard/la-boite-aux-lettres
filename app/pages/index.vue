@@ -151,6 +151,8 @@ article h2 {
   display: flex;
   align-items: center;
   gap: var(--space-1);
+  font-size: 1rem;
+  line-height: 22px;
 }
 
 @media (min-width: 768px) {
@@ -193,24 +195,42 @@ article h2 {
     padding-bottom: var(--space-10);
   }
 
-  #about article > div {
-    padding-right: var(--space-4);
-  }
-
   article h2 {
+    font-size: var(--text-sm);
     gap: var(--space-2);
   }
 }
 
 @media (min-width: 1536px) {
+  .nuxt-content {
+    padding: var(--space-14);
+  }
+
+  article h2 {
+    gap: var(--space-5);
+  }
+
+  #about {
+    padding: 0 var(--space-14);
+  }
+
   #about article > div {
     flex-direction: row;
     gap: var(--space-8);
-    padding-right: var(--space-8);
   }
 
   #about article > div > p {
     width: 50%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .nuxt-content {
+    padding: var(--space-16);
+  }
+
+  #about {
+    padding: 0 var(--space-16);
   }
 }
 </style>

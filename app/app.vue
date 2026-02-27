@@ -23,6 +23,7 @@
   --space-14: 3.5rem;
   --space-16: 4rem;
   --space-20: 5rem;
+  --space-22: 5.5rem;
   --space-24: 6rem;
 
   /* Typography scale - Mobile first (base) */

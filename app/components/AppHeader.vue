@@ -155,6 +155,10 @@ p {
     gap: var(--space-1);
   }
 
+  .app-header--sticky {
+    padding: var(--space-3) var(--space-8);
+  }
+
   .brand {
     width: 332px;
   }
@@ -171,7 +175,7 @@ p {
 
   .app-header--sticky {
     height: 64px;
-    padding: var(--space-4) var(--space-16);
+    padding: var(--space-4) var(--space-12);
   }
 
   .app-header > div {
@@ -192,6 +196,15 @@ p {
 }
 
 @media (min-width: 1536px) {
+  .app-header {
+    padding: var(--space-12) var(--space-20);
+  }
+
+  .app-header--sticky {
+    padding: var(--space-4) var(--space-14);
+  }
+
+
   .brand-logo {
     width: 340px;
   }
@@ -206,6 +219,14 @@ p {
 }
 
 @media (min-width: 1920px) {
+  .app-header {
+    padding: var(--space-24);
+  }
+
+  .app-header--sticky {
+    padding: var(--space-4) var(--space-16);
+  }
+
   .brand-logo {
     width: 447px;
   }

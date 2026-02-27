@@ -110,8 +110,13 @@ img {
 }
 
 @media (min-width: 1536px) {
+  footer {
+    padding: 0 var(--space-14);
+  }
+
   .wrapper {
-    gap: 20rem;
+    gap: var(--space-22);
+    padding: var(--space-14) 0;
   }
 
   img {
@@ -120,8 +125,8 @@ img {
 }
 
 @media (min-width: 1920px) {
-  .wrapper {
-    gap: 28rem;
+  footer {
+    padding: 0 var(--space-16);
   }
 
   img {

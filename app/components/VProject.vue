@@ -79,7 +79,7 @@ article {
 header > div,
 h2 {
   font-size: 1rem;
-  line-height: 1rem;
+  line-height: 22px;
 }
 
 h2 {
@@ -205,13 +205,11 @@ header {
   h2 {
     font-size: var(--text-sm);
     gap: var(--space-2);
-    line-height: 18px;
   }
 
   header > div {
     padding-left: var(--space-5);
     font-size: var(--text-sm);
-    line-height: 18px;
   }
 
   h2 button img {
@@ -229,6 +227,14 @@ header {
   .popup-close,
   .trigger-additional {
     height: 32px;
+  }
+
+  h2 {
+     gap: var(--space-5);
+  }
+
+  header > div {
+    padding-left: var(--space-8);
   }
 
   .popup-close {
