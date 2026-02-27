@@ -141,7 +141,7 @@ header {
   color: var(--primary-color);
   border-radius: 16px;
   border: 2px solid var(--primary-color);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   line-height: var(--leading-tight);
   transform: rotate(-2.6deg);
   text-decoration: none;
