@@ -57,19 +57,20 @@ onMounted(() => {
 footer {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding: 0 var(--space-6);
+  padding: 0 var(--space-4);
 }
 
 .wrapper {
   display: flex;
   align-items: flex-end;
-  gap: var(--space-6);
   padding: var(--space-6) 0;
+  justify-content: space-between;
 }
 
 address {
   font-size: var(--text-xs);
-  line-height: 14.5px
+  line-height: 14.5px;
+  width: 154px;
 }
 
 img {

@@ -141,6 +141,11 @@ p {
 @media (min-width: 768px) {
   .app-header {
     height: 56.25vw;
+    max-height: 100vh;
+  }
+
+  .app-header > div {
+    gap: var(--space-5);
   }
 
   .app-header > div > div {
@@ -164,6 +169,10 @@ p {
     padding: var(--space-4) var(--space-16);
   }
 
+  .app-header > div {
+    gap: var(--space-6);
+  }
+
   .app-header--sticky img {
     height: 24px;
   }
@@ -182,6 +191,10 @@ p {
     width: 340px;
   }
 
+  .app-header > div {
+    gap: var(--space-10);
+  }
+
   .brand {
     width: 688px;
   }
@@ -190,6 +203,10 @@ p {
 @media (min-width: 1920px) {
   .brand-logo {
     width: 447px;
+  }
+
+  .app-header > div {
+    gap: var(--space-12);
   }
 
   .brand {

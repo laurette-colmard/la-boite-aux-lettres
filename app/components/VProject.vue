@@ -68,14 +68,14 @@ article {
 
 header > div,
 h2 {
-  font-size: 18px;
-  line-height: 20px;;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 
 h2 {
   padding: var(--space-2) 0 0;
   display: flex;
-  gap: var(--space-2);
+  gap: var(--space-1);
   align-items: center;
 }
 
@@ -107,7 +107,7 @@ h2 button img {
 }
 
 header > div {
-  padding-left: var(--space-5);
+  padding-left: var(--space-4);
 }
 
 header {
