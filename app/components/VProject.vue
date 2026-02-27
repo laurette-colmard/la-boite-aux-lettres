@@ -5,7 +5,7 @@ const props = defineProps<{
   project: ProjectsCollectionItem
 }>()
 
-const isMediumScreen = useMediaQuery('(min-width: 768px)')
+const isTabletScreen = useMediaQuery('(min-width: 768px)')
 const descToggled = ref<boolean>(false)
 const popupImageToggled = ref<boolean>(false) 
 
@@ -39,17 +39,17 @@ function handleToggle() {
         <img class="arrow-icon" src="~/assets/icons/arrow-down-white.svg" alt="" />
         {{ project.title }}
         <ClientOnly>
-          <button v-if="isMediumScreen && hasDescription" @click="handleToggle">
+          <button v-if="isTabletScreen && hasDescription" @click="handleToggle">
             <img v-if="descToggled" src="~/assets/icons/times-white.svg" alt="" />
             <img v-else src="~/assets/icons/cross-white.svg" alt="" />
           </button>
         </ClientOnly>
       </h2>
       <div>
+        <p>{{ project.shortDescription }}</p>
         <Transition name="fade">
           <p v-if="descToggled">{{ project.description }}</p>
         </Transition>
-        <p v-if="!descToggled">{{ project.shortDescription }}</p>
       </div>
       <a v-if="hasExternalLink" class="trigger-additional" :href="project.toggleUrl" target="_blank" rel="noopener noreferrer">
         {{ project.toggleText }}
@@ -235,6 +235,11 @@ header {
 
   header > div {
     padding-left: var(--space-8);
+    display: flex;
+  }
+
+  header > div p {
+    width: 50%;
   }
 
   .popup-close {
