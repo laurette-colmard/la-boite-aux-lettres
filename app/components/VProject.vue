@@ -46,8 +46,10 @@ function handleToggle() {
         </ClientOnly>
       </h2>
       <div>
-        <p v-if="descToggled">{{ project.description }}</p>
-        <p v-else>{{ project.shortDescription }}</p>
+        <Transition name="fade">
+          <p v-if="descToggled">{{ project.description }}</p>
+        </Transition>
+        <p v-if="!descToggled">{{ project.shortDescription }}</p>
       </div>
       <a v-if="hasExternalLink" class="trigger-additional" :href="project.toggleUrl" target="_blank" rel="noopener noreferrer">
         {{ project.toggleText }}
@@ -114,6 +116,10 @@ h2 button img {
   margin-bottom: var(--space-4);
 }
 
+article:last-child .image-wrap > img {
+  margin-bottom: 0;
+}
+
 header > div {
   padding-left: var(--space-4);
 }
@@ -143,7 +149,7 @@ header {
   border-radius: 16px;
   border: 2px solid var(--primary-color);
   font-size: var(--text-base);
-  line-height: 1;
+  line-height: 16px;
   padding: 0 var(--space-2);
   transform: rotate(-2.6deg);
   text-decoration: none;
@@ -158,19 +164,84 @@ header {
 }
 
 @media (min-width: 768px) {
+  .popup-close,
+  .trigger-additional {
+    height: 24px;
+  }
+
+  .popup-close {
+    width: 24px;
+  }
+
   .trigger-additional {
     border-radius: 20px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  h2 {
+    gap: var(--space-3);
+  }
+
+  header > div {
+    padding-left: var(--space-6);
+  }
+
+  .image-wrap > img {
+    margin-bottom: var(--space-8);
   }
 }
 
 @media (min-width: 1024px) {
+  .popup-close,
+  .trigger-additional {
+    height: 28px;
+  }
+
+  .popup-close {
+    width: 28px;
+  }
+
   h2 button img {
     width: 14px;
   }
 
-
   .trigger-additional {
     border-radius: 24px;
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .popup-close,
+  .trigger-additional {
+    height: 32px;
+  }
+
+  .popup-close {
+    width: 32px;
+  }
+
+  .trigger-additional {
+    font-size: 26px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .popup-close,
+  .trigger-additional {
+    height: 36px;
+  }
+
+  .popup-close {
+    width: 36px;
+  }
+
+  .trigger-additional {
+    font-size: 30px;
+    line-height: 32px;
   }
 }
 </style>

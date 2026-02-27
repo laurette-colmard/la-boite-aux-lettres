@@ -154,8 +154,13 @@ article h2 {
 }
 
 @media (min-width: 768px) {
+  .nuxt-content {
+    padding: var(--space-8);
+  }
+
   #about {
     margin-top: var(--space-8);
+    padding: 0 var(--space-8);
   }
 
   #about article {
@@ -167,6 +172,10 @@ article h2 {
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
+  }
+
+  article h2 {
+    gap: var(--space-3);
   }
 }
 

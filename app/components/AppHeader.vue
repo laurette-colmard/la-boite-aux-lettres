@@ -142,6 +142,7 @@ p {
   .app-header {
     height: 56.25vw;
     max-height: 100vh;
+    padding: var(--space-10) var(--space-14);
   }
 
   .app-header > div {

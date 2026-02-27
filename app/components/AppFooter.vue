@@ -78,8 +78,17 @@ img {
 }
 
 @media (min-width: 768px) {
+  footer {
+    padding: 0 var(--space-8);
+  }
+
   .wrapper {
-    gap: var(--space-12);
+    padding: var(--space-8) 0;
+  }
+
+  address {
+    width: 66.666%;
+    font-size: var(--text-sm);
   }
 
   img {

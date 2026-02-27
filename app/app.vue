@@ -20,7 +20,10 @@
   --space-8: 2rem;
   --space-10: 2.5rem;
   --space-12: 3rem;
+  --space-14: 3.5rem;
   --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
 
   /* Typography scale - Mobile first (base) */
   --text-xs: 0.75rem;
