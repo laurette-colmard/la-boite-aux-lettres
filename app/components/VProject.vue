@@ -128,11 +128,12 @@ header {
   cursor: pointer;
   align-self: flex-end;
   margin-top: var(--space-3);
-  padding: var(--space-1) var(--space-2);
+  height: 20px;
+  box-sizing: border-box;
 }
 
 .popup-close {
-  width: 28px;
+  width: 20px;
 }
 
 .trigger-additional {
@@ -142,7 +143,8 @@ header {
   border-radius: 16px;
   border: 2px solid var(--primary-color);
   font-size: var(--text-base);
-  line-height: var(--leading-tight);
+  line-height: 1;
+  padding: 0 var(--space-2);
   transform: rotate(-2.6deg);
   text-decoration: none;
 }
@@ -166,10 +168,6 @@ header {
     width: 14px;
   }
 
-  .popup-close,
-  .trigger-additional {
-    padding: var(--space-2) var(--space-2);
-  }
 
   .trigger-additional {
     border-radius: 24px;
