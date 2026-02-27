@@ -21,6 +21,12 @@ const hasExtraImage = computed(() => {
   return Boolean(props.project.popupImage)
 })
 
+if (props.project.popupImage) {
+  useHead({
+    link: [{ rel: 'preload', as: 'image', href: props.project.popupImage }],
+  })
+}
+
 function handleToggle() {
   descToggled.value = !descToggled.value
 }
@@ -53,7 +59,9 @@ function handleToggle() {
     </header>
     <div class="image-wrap">
       <img :src="project.image" :alt="`${project.title} — ${project.shortDescription}`" />
-      <img v-if="popupImageToggled" :src="project.popupImage" :alt="`${project.title} — alternate view`" />
+      <Transition name="fade">
+        <img v-if="popupImageToggled" :src="project.popupImage" :alt="`${project.title} — alternate view`" />
+      </Transition>
     </div>
   </article>
 </template>
@@ -137,6 +145,14 @@ header {
   line-height: var(--leading-tight);
   transform: rotate(-2.6deg);
   text-decoration: none;
+}
+
+.fade-enter-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
