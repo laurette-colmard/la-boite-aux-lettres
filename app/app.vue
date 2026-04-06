@@ -102,6 +102,13 @@ a:hover {
 
 html {
   scroll-behavior: smooth;
+  line-height: 1.1;
+}
+
+@media (min-width: 1024px) {
+  html {
+    line-height: 1.2;
+  }
 }
 
 .arrow-icon {

@@ -69,7 +69,7 @@ footer {
 
 address {
   font-size: var(--text-xs);
-  line-height: 14.5px;
+  line-height: 1.2;
   width: 154px;
 }
 

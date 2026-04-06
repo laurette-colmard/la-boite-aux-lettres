@@ -132,7 +132,6 @@ useSchemaOrg([
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  line-height: var(--leading-normal);
 }
 
 #about article > div {
@@ -144,7 +143,6 @@ useSchemaOrg([
 .load-more,
 #about article {
   font-size: 18px;
-  line-height: 22px;
 }
 
 article h2 {
@@ -152,7 +150,6 @@ article h2 {
   align-items: center;
   gap: var(--space-1);
   font-size: 1rem;
-  line-height: 22px;
 }
 
 @media (min-width: 768px) {
