@@ -79,7 +79,6 @@ article {
 header > div,
 h2 {
   font-size: 1rem;
-  line-height: 22px;
 }
 
 h2 {
@@ -139,11 +138,11 @@ header {
   cursor: pointer;
   align-self: flex-end;
   margin-top: var(--space-3);
-  height: 20px;
   box-sizing: border-box;
 }
 
 .popup-close {
+  height: 20px;
   width: 20px;
 }
 
@@ -153,10 +152,17 @@ header {
   color: var(--primary-color);
   border-radius: 16px;
   border: 2px solid var(--primary-color);
-  font-size: var(--text-base);
-  line-height: 16px;
-  padding: 0 var(--space-2);
+  font-size: 18px;
+  line-height: 1;
+  padding: var(--space-1) var(--space-3);
   transform: rotate(-2.6deg);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.trigger-additional:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -169,19 +175,14 @@ header {
 }
 
 @media (min-width: 768px) {
-  .popup-close,
-  .trigger-additional {
-    height: 24px;
-  }
-
   .popup-close {
+    height: 24px;
     width: 24px;
   }
 
   .trigger-additional {
     border-radius: 20px;
     font-size: 18px;
-    line-height: 20px;
   }
 
   h2 {
@@ -198,12 +199,8 @@ header {
 }
 
 @media (min-width: 1024px) {
-  .popup-close,
-  .trigger-additional {
-    height: 28px;
-  }
-
   .popup-close {
+    height: 28px;
     width: 28px;
   }
 
@@ -224,14 +221,14 @@ header {
   .trigger-additional {
     border-radius: 24px;
     font-size: 22px;
-    line-height: 24px;
+    padding: var(--space-1) var(--space-4);
   }
 }
 
 @media (min-width: 1536px) {
-  .popup-close,
-  .trigger-additional {
+  .popup-close {
     height: 32px;
+    width: 32px;
   }
 
   h2 {
@@ -247,29 +244,19 @@ header {
     width: 50%;
   }
 
-  .popup-close {
-    width: 32px;
-  }
-
   .trigger-additional {
     font-size: 26px;
-    line-height: 28px;
   }
 }
 
 @media (min-width: 1920px) {
-  .popup-close,
-  .trigger-additional {
-    height: 36px;
-  }
-
   .popup-close {
+    height: 36px;
     width: 36px;
   }
 
   .trigger-additional {
     font-size: 30px;
-    line-height: 32px;
   }
 }
 </style>

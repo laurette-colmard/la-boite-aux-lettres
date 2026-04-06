@@ -5,6 +5,14 @@
 </template>
 
 <style lang="css">
+@font-face {
+  font-family: 'Bazaar';
+  src: url('/fonts/bazaar.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Colors */
   --primary-color: #fff;
