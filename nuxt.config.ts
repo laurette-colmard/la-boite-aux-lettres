@@ -36,6 +36,9 @@ export default defineNuxtConfig({
       styles: ['normal']
     }
   },
+  ogImage: {
+    enabled: false,
+  },
   sitemap: {
     zeroRuntime: true,
   },

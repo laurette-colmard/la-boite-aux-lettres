@@ -1,6 +1,10 @@
 ---
-order: 2
 title: Abbiocco
-shortDescription: Humanist sans serif typeface family. Soon available.
 image: /images/projects/abbiocco.svg
+isDraft: false
+order: 2
+popupImage: ""
+shortDescription: Humanist sans serif typeface family. Soon available.
+toggleText: ""
+toggleUrl: ""
 ---
