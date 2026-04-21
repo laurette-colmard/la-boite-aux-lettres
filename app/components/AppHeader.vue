@@ -52,7 +52,7 @@ const { isScrolled } = useScroll(scrollThreshold.value)
 
 .app-header {
   display: grid;
-  padding: var(--space-12) var(--space-8);
+  padding: var(--space-8);
   height: 68vh;
   box-sizing: border-box;
   background-color: var(--primary-color);

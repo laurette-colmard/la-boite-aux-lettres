@@ -63,7 +63,7 @@ html, body, #__nuxt {
 
 h1 {
   font-size: clamp(6rem, 15vw, 12rem);
-  line-height: 0.85;
+  line-height: 1.15;
   margin: 0;
   font-family: 'Bazaar', sans-serif;
 }
