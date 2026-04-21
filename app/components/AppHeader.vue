@@ -82,7 +82,7 @@ const { isScrolled } = useScroll(scrollThreshold.value)
   padding: var(--space-3) var(--space-4);
   align-items: center;
   animation: slideDown 0.3s ease;
-  z-index: 10;
+  z-index: 15;
   box-sizing: border-box;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
 }

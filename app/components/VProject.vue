@@ -126,7 +126,6 @@ header > div {
 }
 
 header > div :deep(a) {
-  text-decoration: underline;
   color: var(--primary-color);
 }
 

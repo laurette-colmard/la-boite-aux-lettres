@@ -142,7 +142,7 @@ useSchemaOrg([
 
 .load-more,
 #about article {
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 article h2 {
@@ -190,6 +190,11 @@ article h2 {
 
   #about article {
     padding-bottom: var(--space-10);
+  }
+
+  .load-more,
+  #about article {
+    font-size: var(--text-sm);
   }
 
   article h2 {
