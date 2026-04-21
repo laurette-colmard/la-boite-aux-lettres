@@ -69,10 +69,12 @@ useSchemaOrg([
         :project="project"
         :class="{ 'visually-hidden': index >= displayCount }"
       />
-      <button v-if="hasMoreProjects" class="load-more" @click="loadMore">
-        <img class="arrow-icon" src="~/assets/icons/arrow-down-white.svg" alt="" />
-        See more projects
-      </button>
+      <div v-if="hasMoreProjects" class="load-more-wrap">
+        <button class="load-more" @click="loadMore">
+          <img class="arrow-icon" src="~/assets/icons/arrow-down-white.svg" alt="" />
+          See more projects
+        </button>
+      </div>
     </section>
     <section id="about" v-if="about">
       <article>
@@ -99,7 +101,12 @@ useSchemaOrg([
   padding: var(--space-4);
 }
 
+.load-more-wrap {
+  border-top: 1px solid var(--primary-color);
+}
+
 .load-more {
+  margin-top: 8px;
   display: flex;
   align-items: center;
   gap: var(--space-2);

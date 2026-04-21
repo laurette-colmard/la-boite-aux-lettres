@@ -120,4 +120,11 @@ address {
 .arrow-icon {
   width: 12px;
 }
+
+@media (min-width: 1024px) {
+  .arrow-icon {
+    width: 14px;
+  }
+}
+
 </style>
