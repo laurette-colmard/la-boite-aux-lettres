@@ -57,7 +57,9 @@ function handleToggle() {
       <button v-if="hasExtraImage && !popupImageToggled" type="button" class="trigger-additional" @click="popupImageToggled = true">
         {{ project.toggleText }}
       </button>
-      <img v-if="popupImageToggled" class="popup-close" src="~/assets/icons/times-bazaar-white.svg" alt="" @click="popupImageToggled = false"  />
+      <button v-if="popupImageToggled" class="popup-close" @click="popupImageToggled = false">
+        x
+      </button>
     </header>
     <div class="image-wrap">
       <img :src="project.image" :alt="`${project.title} — ${project.shortDescription}`" />
@@ -131,6 +133,7 @@ header > div :deep(a) {
 header {
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
 }
 
 .popup-close,
@@ -139,14 +142,6 @@ header {
   align-self: flex-end;
   margin-top: var(--space-3);
   box-sizing: border-box;
-}
-
-.popup-close {
-  height: 20px;
-  width: 20px;
-}
-
-.trigger-additional {
   font-family: var(--font-accent);
   background: transparent;
   color: var(--primary-color);
@@ -154,16 +149,28 @@ header {
   border: 2px solid var(--primary-color);
   font-size: 18px;
   line-height: 1;
-  padding: var(--space-1) var(--space-3);
-  transform: rotate(-2.6deg);
-  text-decoration: none;
+  padding: 2px var(--space-2);
   transition: background-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
 }
 
+.popup-close {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trigger-additional {
+  transform: rotate(-2.6deg);
+}
+
+.popup-close:hover,
 .trigger-additional:hover {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  text-decoration: none;
 }
 
 .fade-enter-active {
@@ -175,16 +182,6 @@ header {
 }
 
 @media (min-width: 768px) {
-  .popup-close {
-    height: 24px;
-    width: 24px;
-  }
-
-  .trigger-additional {
-    border-radius: 20px;
-    font-size: 18px;
-  }
-
   h2 {
     gap: var(--space-3);
   }
@@ -196,14 +193,15 @@ header {
   .image-wrap > img {
     margin-bottom: var(--space-8);
   }
+
+  .trigger-additional,
+  .popup-close {
+    border-radius: 20px;
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1024px) {
-  .popup-close {
-    height: 28px;
-    width: 28px;
-  }
-
   h2 {
     font-size: var(--text-sm);
     gap: var(--space-2);
@@ -223,14 +221,14 @@ header {
     font-size: 22px;
     padding: var(--space-1) var(--space-4);
   }
+
+  .popup-close {
+    font-size: 22px;
+    padding: var(--space-1);
+  }
 }
 
 @media (min-width: 1536px) {
-  .popup-close {
-    height: 32px;
-    width: 32px;
-  }
-
   h2 {
      gap: var(--space-5);
   }
@@ -244,17 +242,14 @@ header {
     width: 50%;
   }
 
+  .popup-close,
   .trigger-additional {
     font-size: 26px;
   }
 }
 
 @media (min-width: 1920px) {
-  .popup-close {
-    height: 36px;
-    width: 36px;
-  }
-
+  .popup-close,
   .trigger-additional {
     font-size: 30px;
   }
