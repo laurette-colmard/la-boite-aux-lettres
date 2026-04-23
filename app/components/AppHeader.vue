@@ -151,7 +151,7 @@ p {
   .app-header > div > div {
     display: flex;
     flex-direction: row;
-    gap: var(--space-1);
+    gap: 0.35rem;
   }
 
   .app-header--sticky {

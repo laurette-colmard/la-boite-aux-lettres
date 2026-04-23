@@ -118,7 +118,7 @@ address {
 }
 
 .arrow-icon {
-  width: 12px;
+  width: 10px;
 }
 
 @media (min-width: 1024px) {

@@ -58,7 +58,7 @@ function handleToggle() {
         {{ project.toggleText }}
       </button>
       <button v-if="popupImageToggled" class="popup-close" @click="popupImageToggled = false">
-        x
+        *
       </button>
     </header>
     <div class="image-wrap">
