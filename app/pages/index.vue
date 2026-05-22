@@ -6,7 +6,7 @@ const PROJECTS_PER_PAGE = 8
 const displayCount = ref(PROJECTS_PER_PAGE)
 
 const { data: projects } = await useAsyncData(`projects-${route.path}`, async () => {
-  return await queryCollection('projects').order('order', 'ASC').all()
+  return await queryCollection('projects').where('isDraft', '<>', true).order('order', 'ASC').all()
 })
 
 const hasMoreProjects = computed(() => (projects.value?.length ?? 0) > displayCount.value)
