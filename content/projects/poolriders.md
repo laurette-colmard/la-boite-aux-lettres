@@ -1,5 +1,6 @@
 ---
 order: 5
+isDraft: false
 title: PoolRiders
 shortDescription: Lettering for a skateboard. Personal project.
 image: /images/projects/poolriders.svg

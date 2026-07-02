@@ -22,7 +22,7 @@ export default defineContentConfig({
         toggleText: z.string(),
         popupImage: z.string(),
         preview: z.string(),
-        isDraft: z.boolean()
+        isDraft: z.boolean().default(false)
       })
     })
   }
