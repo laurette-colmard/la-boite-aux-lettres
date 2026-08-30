@@ -1,7 +1,7 @@
 ---
 title: BAZAAR
 description: BAZAAR is a gestural and spirited script typeface I published with Letters from Sweden in 2025. Letterforms show peculiar strokes’ path inspired by graffiti and street writing, giving the typeface a very fierce and wild rhythm. The font family comes in five weights, from Light to Black, and offers extensive language support along with contextual alternates and a set of icons. BAZAAR is ready for all design projects, except the ones that need oldstyle figures and small caps.
-image: /images/projects/Screenshot-20260830-193732.png
+image: /images/projects/LBAL-WEB-Bazaar.svg
 isDraft: false
 order: 1
 seo:
