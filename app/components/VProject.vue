@@ -21,12 +21,6 @@ const hasExtraImage = computed(() => {
   return Boolean(props.project.popupImage)
 })
 
-if (props.project.popupImage) {
-  useHead({
-    link: [{ rel: 'preload', as: 'image', href: props.project.popupImage }],
-  })
-}
-
 function handleToggle() {
   descToggled.value = !descToggled.value
 }
