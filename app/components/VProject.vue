@@ -42,7 +42,7 @@ function handleToggle() {
       <div>
         <p v-html="project.shortDescription"></p>
         <Transition name="fade">
-          <p v-if="descToggled">{{ project.description }}</p>
+          <p v-if="descToggled" v-html="project.description"></p>
         </Transition>
       </div>
       <a v-if="hasExternalLink" class="trigger-additional" :href="project.toggleUrl" target="_blank" rel="noopener noreferrer">
