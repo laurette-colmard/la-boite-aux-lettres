@@ -4,7 +4,7 @@ description: ICA Supermarket Medis is situated in the popular area of Södermalm
 image: /images/projects/LBAL-WEB-ICA.svg
 isDraft: false
 order: 3
-shortDescription: A blocky, modular black style with compact diacritics. Commissioned by <a href="https://hummingbirds.se/" target="_blank">Hummingbirds</a>, in collaboration with <a href="https://lettersfromsweden.se/font/bazaar/" target="_blank">Letters from Sweden</a>.
+shortDescription: A blocky, modular black style with compact diacritics. Commissioned by <a href="https://hummingbirds.se/" target="_blank">Hummingbirds</a>, in collaboration with <a href="https://lettersfromsweden.se/" target="_blank">Letters from Sweden</a>.
 toggleText: ""
 toggleUrl: ""
 ---

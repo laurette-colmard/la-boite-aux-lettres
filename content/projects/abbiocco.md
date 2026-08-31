@@ -1,10 +1,10 @@
 ---
-title: Abbiocco
-image: /images/projects/abbiocco.svg
-isDraft: true
-order: 2
+title: Humanist Sans
+image: /images/projects/LBAL-WEB-Abbiocco.svg
+isDraft: false
+order: 10
 popupImage: ""
-shortDescription: Humanist sans serif typeface family. Soon available.
+shortDescription: A text typeface family with a warm vibe. Soon available.
 toggleText: ""
 toggleUrl: ""
 ---

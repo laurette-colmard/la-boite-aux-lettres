@@ -4,7 +4,7 @@ description: Established in December 1864 by Rudolf Wall, Dagens Nyheteris a Swe
 image: /images/projects/LBAL-WEB-DagensNyheter.svg
 isDraft: false
 order: 2
-shortDescription: An expansive serif typeface family for Sweden’s prominent daily newspaper. In collaboration with <a href="https://lettersfromsweden.se/font/bazaar/" target="_blank">Letters from Sweden</a>.
+shortDescription: An expansive serif typeface family for Sweden’s prominent daily newspaper. In collaboration with <a href="https://lettersfromsweden.se/" target="_blank">Letters from Sweden</a>.
 toggleText: ""
 toggleUrl: ""
 ---

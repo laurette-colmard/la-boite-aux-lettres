@@ -4,7 +4,7 @@ description: "COBS Bread is a Canadian bakery chain known for its freshly baked 
 image: /images/projects/LBAL-WEB-COBS.svg
 isDraft: false
 order: 8
-shortDescription: A doughy typeface family for a Canadian bakery chain. Commissioned by <a href="https://www.rethinkideas.com/ target="_blank">Rethink</a>, in collaboration with <a href="https://lettersfromsweden.se/font/bazaar/" target="_blank">Letters from Sweden</a>.
+shortDescription: A doughy typeface family for a Canadian bakery chain. Commissioned by <a href="https://www.rethinkideas.com/ target="_blank">Rethink</a>, in collaboration with <a href="https://lettersfromsweden.se/" target="_blank">Letters from Sweden</a>.
 toggleText: ""
 toggleUrl: ""
 ---
