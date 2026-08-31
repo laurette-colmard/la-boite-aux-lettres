@@ -1,6 +1,6 @@
 ---
 title: Humanist Sans
-image: /images/projects/LBAL-WEB-Abbiocco.svg
+image: /images/projects/LBAL-WEB-Humanist-Sans.svg
 isDraft: false
 order: 10
 popupImage: ""
