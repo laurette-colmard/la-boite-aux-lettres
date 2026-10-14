@@ -7,4 +7,5 @@ export default defineAppConfig({
   title: `${siteName} - ${author}`,
   description: "Characters with character,",
   description2: `by type designer ${author}.`,
+  projectsPerPage: 20,
 })

@@ -2,7 +2,7 @@
 const appConfig = useAppConfig()
 const route = useRoute()
 
-const PROJECTS_PER_PAGE = 8
+const PROJECTS_PER_PAGE = appConfig.projectsPerPage ?? 20
 const displayCount = ref(PROJECTS_PER_PAGE)
 
 const { data: projects } = await useAsyncData(`projects-${route.path}`, async () => {
